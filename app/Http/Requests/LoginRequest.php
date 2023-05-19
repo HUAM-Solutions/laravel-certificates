@@ -40,6 +40,9 @@ class LoginRequest extends FormRequest
     }
     public function isEmail($value){
         $factory =$this->container->make(ValidationFactory::class);
-        return !$factory->make(['email'=> $value], ['email', 'email'])->fails();
+        return ! $factory->make(
+            ['email' => $value],
+            ['email' => 'email']
+        )->fails();
     }
 }
