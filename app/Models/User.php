@@ -45,9 +45,10 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
-    /*mutator-eloquent */
+    /*eloquentes el ORM que usa laravel que tiene los mutator nos permiten ejecutar funciones que van a hacer alguna opercacion con alguno de los campos y los acsesors */
+    /*para que un mutator funcione de manera correcta la funcion debe de empezar con la palabra set seguido del nombre del atributo que se modificara y por ultimo Attribute*/
     public function setPasswordAttribute($value)
     {
-        $this->attibutes['password'] = bcrypt($value);
+        $this->attributes['password'] = bcrypt($value);
     }
 }
