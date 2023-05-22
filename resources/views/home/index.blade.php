@@ -5,7 +5,7 @@
     @auth
         <p>Bienvenido {{auth()->user()->name ??auth()->user()->email}}, estas autenticado a la pagina</p>
         <p>
-            <a href="logout">logout</a>
+            <a href="/logout">logout</a>
         </p>
     @endauth
 
