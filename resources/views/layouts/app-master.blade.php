@@ -7,13 +7,13 @@
     <title>Aplicacion de login</title>
     <link rel="stylesheet" href="{{ url('assets/css/bootstrap.min.css')}}"> 
     <!-- Bootstrap CSS -->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">  --}}
 </head>
 <body>
     @include('layouts.app')
     <main class="container">
         @yield('content')
     </main>
-    <script src="{{ url('assets/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{ url('assets/js/bootstrap.bundle.min.js')}}"></script> 
 </body>
 </html>

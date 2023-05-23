@@ -18,7 +18,7 @@
         justify-content: center;
     }
     .form-container{
-
+        width: 400px
     }
 
 </style>
