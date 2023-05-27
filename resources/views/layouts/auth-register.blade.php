@@ -11,14 +11,19 @@
 </head>
 <style>
     body{
+        background-color: #00CACA;
+        background: linear-gradient(to right,#32aada,#3ff5fc)
         width:100%;
-        height:100vh;
         display:flex;
         align-items: center;
         justify-content: center;
     }
     .form-container{
-        width: 400px
+        width: 400px;
+    }
+    .bg{
+        background-image: url(../public/assets/img/curso.jpg);
+        background-position: center center
     }
 
 </style>
@@ -26,6 +31,7 @@
     <main class="form-container">
         @yield('content')
     </main>
+
     <script src="{{ url('assets/js/bootstrap.bundle.min.js')}}"></script>
 </body>
 </html>
