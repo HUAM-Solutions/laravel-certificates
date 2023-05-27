@@ -7,6 +7,8 @@ use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CertificadoController;
 use App\Http\Controllers\CursoController;
+use App\Http\Controllers\ProfileController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +32,8 @@ Route::get('/logout', [LogoutController::class, 'logout']);
 
 Route::resource('certificados', CertificadoController::class);
 Route::resource('cursos', CursoController::class);
+
+Route::get('/profile',[ProfileController::class, 'index']);
 
 
 Route::get('/home', [HomeController::class, 'index']);
