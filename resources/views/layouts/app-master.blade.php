@@ -10,10 +10,11 @@
     {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">  --}}
 </head>
 <body>
-    @include('layouts.app')
-    <main class="container">
+    {{-- @include('layouts.app') --}}
+     @include('layouts.sidebar')
+    <div class="container">
         @yield('content')
-    </main>
+    </div>
     <script src="{{ url('assets/js/bootstrap.bundle.min.js')}}"></script> 
 </body>
 </html>

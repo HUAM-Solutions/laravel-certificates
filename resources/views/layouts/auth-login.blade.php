@@ -11,7 +11,7 @@
 </head>
 <style>
     body{
-        background-color: #00CACA;
+        background-color: #00CCCB;
         background: linear-gradient(to right,#32aada,#3ff5fc)
         width:100%;
         display:flex;
@@ -55,7 +55,7 @@
                             <button class="btn btn-outline-primary w-100 my-1">
                                 <div class="row align-items-center">
                                     <div class="col-2 d-none d-md-block">
-                                        <img src="././public" width="32" alt="">
+                                        <img src="/public/assets/img/facebook.svg" width="32" alt="">
                                     </div>
                                     <div class="col-12 col-md-10 text-center">
                                         Facebook
@@ -67,7 +67,7 @@
                             <button class="btn btn-outline-danger w-100 my-1">
                                 <div class="row align-items-center">
                                     <div class="col-2 d-none d-md-block">
-                                        <img src="../public/assets/img/facbook.svg" width="32" alt="">
+                                        <img href="{{url('/public/assets/img/facebook1.png')}}" width="32" alt="">
                                     </div>
                                     <div class="col-12 col-md-10 text-center">
                                         Google

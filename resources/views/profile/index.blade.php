@@ -1,6 +1,6 @@
 @extends('layouts.app-master')
 @section('content')
-    <div class="content">
+    <div class="content ">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
@@ -20,19 +20,24 @@
                                                 <th>DNI</th>
                                                 <th>Birthdate</th>
                                                 <th>Email</th>
-                                                <th class="text-right"></th>
+                                                <th class="text-right">Acciones</th>
                                             </thead>
                                             <tbody>
-                                                @foreach($profiles as $profile)
                                                     <tr>
-                                                        <td>{{$profile->name}}</td>
-                                                        <td>{{$profile->lastname}}</td>
-                                                        <td>{{$profile->dni}}</td>
-                                                        <td>{{$profile->birthdate}}</td>
-                                                        <td>{{$profile->email}}</td>
-                                                        <td></td>
+                                                        <td>{{auth()->user()->name}}</td>
+                                                        <td>{{auth()->user()->lastname}}</td>
+                                                        <td>{{auth()->user()->dni}}</td>
+                                                        <td>{{auth()->user()->birthdate}}</td>
+                                                        <td>{{auth()->user()->email}}</td>
+                                                        <td class="td-actions">
+                                                            <button class="btn btn-info" type="button">
+                                                                {{-- <a href="#" class="nav-link text-dark" >
+                                                                    <i class="fa-sharp fa-regular fa-pen-to-square"></i>
+                                                                </a> --}}
+                                                                <i class="fa-sharp fa-regular fa-pen-to-square"></i>
+                                                            </button>
+                                                        </td>
                                                     </tr>
-                                                @endforeach
                                                 
                                             </tbody>
                                         </table>
