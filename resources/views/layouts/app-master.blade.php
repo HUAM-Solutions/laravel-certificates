@@ -7,13 +7,20 @@
     <title>Aplicacion de login</title>
     <link rel="stylesheet" href="{{ url('assets/css/bootstrap.min.css')}}"> 
     <!-- Bootstrap CSS -->
-    {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">  --}}
+    <style>
+        .sidebar {
+            width: 60%;
+        }
+    </style>
 </head>
 <body>
-    {{-- @include('layouts.app') --}}
-     @include('layouts.sidebar')
-    <div class="container">
-        @yield('content')
+    <div class="row flex-wrap sidebar">
+        <div class="bg-dark col-auto col-md-4 col-lg-3 min-vh-100 d-flex flex-column justify-content-between">
+            @include('layouts.sidebar')
+        </div>
+        <div class="col">
+            @yield('content')
+        </div>
     </div>
     <script src="{{ url('assets/js/bootstrap.bundle.min.js')}}"></script> 
 </body>

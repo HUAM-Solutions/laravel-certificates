@@ -13,7 +13,7 @@
 <body>
     <div class="container-fluid">
         <div class="row flex-wrap">
-            <div class="bg-dark col-auto col-md-4 col-lg-3 min-vh-100 d-flex flex-column justify-content-between">
+            <div class="bg-dark col-auto  min-vh-100 d-flex flex-column justify-content-between">
                 <div class="bg-dark p-2">
                     <a href="/home" class="d-flex text-decoration-none mt-1 align-items-center text-white">
                         <span class="fs-4 d-none d-sm-inline">Reliser Safety Training</span>
