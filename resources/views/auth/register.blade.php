@@ -36,7 +36,7 @@
             <div class="mb-3 ">
                 <span>¿Ya tiene una cuenta? <a href="/login">Login</a></span>
             </div>
-            <button type="button" class="btn btn-primary w-100 ">Create account</button>
+            <button type="submit" class="btn btn-primary w-100 ">Create account</button>
             
         
         </form>

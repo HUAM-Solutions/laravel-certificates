@@ -11,47 +11,6 @@
 </head>
 
 <body>
-    {{-- <div id="sidemenu" class="menu-collapse">
-        <!--Header-->
-        <div id="header" class="header">
-            <div id="title"><span>Vida MRR</span></div>
-            <div id="menu-btn">
-                <di class="btn-hamburger"></di>
-                <di class="btn-hamburger"></di>
-                <di class="btn-hamburger"></di>
-            </div>
-        </div>
-        <!--Profile-->
-        <div id="profile">
-            <div id="photo"><img src="../curso.jpg" alt=""></div>
-            <div id="name"><span>{{auth()->user()->name ??auth()->user()->email}}</span></div>
-        </div>
-        <!--Items-->
-        <div id="menu-items">
-            <div class="item">
-                <a href="">
-                    <div class="icon"><img src="" alt=""></div>
-                    <div class="title"><span>Cloud services</span></div>
-                </a>
-            </div>
-            <div class="item separator">
-                
-            </div>
-        </div>
-
-    </div>
-    <div id="main-container"></div>
-    <script>
-        const btn = document.querySelector('#menu-btn');
-        const menu = document.querySelector('#sidemenu');
-        btn.addEventListener('click', =>{
-            menu.classList.toggle('menu-expanded');
-            menu.classList.toggle('menu-collapsed');
-            document.querySelector('body').classList.toggle('body-expanded')
-        })
-    </> --}}
-
-
     <div class="container-fluid">
         <div class="row flex-wrap">
             <div class="bg-dark col-auto col-md-4 col-lg-3 min-vh-100 d-flex flex-column justify-content-between">
@@ -75,6 +34,8 @@
                                 <i class="fa-solid fa-user"></i><span class="fs-5 ms-3 d-none d-sm-inline">Profile</span>
                             </a>
                         </li>
+
+                        @if(auth()->user() && auth()->user()->role === 'admin')
                         <li class="nav-item py-2 py-sm-0 ">
                             <a href="{{ route('cursos.index') }}" class="nav-link text-white" >
                                 <i class="fa-solid fa-book"></i><span class="fs-5 ms-3 d-none d-sm-inline">Cursos</span>
@@ -85,6 +46,7 @@
                                 <i class="fa-solid fa-table-list"></i><span class="fs-5 ms-3 d-none d-sm-inline">Certific.</span>
                             </a>
                         </li>
+                        @endif
                         <li class="nav-item py-2 py-sm-0 ">
                             <a href="/logout" class="nav-link text-white" >
                                 <i class="fa-sharp fa-regular fa-right-from-bracket"></i><span class="fs-5 ms-3 d-none d-sm-inline">LogOut</span>
