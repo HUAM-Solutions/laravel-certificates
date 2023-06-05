@@ -24,7 +24,7 @@
         width: 100%;
     }
     .bg{
-        background-image: url("../public/assets/img/curso.jpg");
+        background-image: url({{"../public/assets/img/curso.jpg"}});
         background-position: center center;
         background-color: #0E2334;
     }

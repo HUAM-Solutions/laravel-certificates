@@ -28,9 +28,9 @@
 
 </style>
 <body>
-    <main class="form-container">
+    <div class="form-container">
         @yield('content')
-    </main>
+    </div>
 
     <script src="{{ url('assets/js/bootstrap.bundle.min.js')}}"></script>
 </body>
