@@ -6,11 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aplicacion de login</title>
     <link rel="stylesheet" href="{{ url('assets/css/bootstrap.min.css')}}"> 
-    <!-- Bootstrap CSS -->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"> -->
 </head>
 <style>
+
+    body, html{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    }
+
     body{
+    background: linear-gradient(318deg, #ff0062, #ffff00, #00ff00, #00ffff, #0000ff);
+    background-size: 1000% 1000%;
+    
+    -webkit-animation: Coolgradient 41s linear infinite;
+    -moz-animation: Coolgradient 41s linear infinite;
+    -o-animation: Coolgradient 41s linear infinite;
+    animation: Coolgradient 41s linear infinite;
+    }
+
+    @-webkit-keyframes Coolgradient {
+        0%{background-position:5% 0%}
+        50%{background-position:96% 100%}
+        100%{background-position:5% 0%}
+    }
+    @-moz-keyframes Coolgradient {
+        0%{background-position:5% 0%}
+        50%{background-position:96% 100%}
+        100%{background-position:5% 0%}
+    }
+    @-o-keyframes Coolgradient {
+        0%{background-position:5% 0%}
+        50%{background-position:96% 100%}
+        100%{background-position:5% 0%}
+    }
+    @keyframes Coolgradient { 
+        0%{background-position:5% 0%}
+        50%{background-position:96% 100%}
+        100%{background-position:5% 0%}
+    }
+
+
+    /* body{
         background-color: #00CCCB;
         background: linear-gradient(to right,#32aada,#3ff5fc)
         width:100%;
@@ -18,15 +56,16 @@
         align-items: center;
         justify-content: center;
         padding-top:0px;
-
-    }
+     } */
     .form-container{
         width: 100%;
     }
     .bg{
-        background-image: url({{"../public/assets/img/curso.jpg"}});
+
+        background-size: cover;
         background-position: center center;
         background-color: #0E2334;
+        background-image: url({{ asset('assets/img/curso.jpg') }});
     }
 
 </style>
@@ -55,7 +94,7 @@
                             <button class="btn btn-outline-primary w-100 my-1">
                                 <div class="row align-items-center">
                                     <div class="col-2 d-none d-md-block">
-                                        <img src="/public/assets/img/facebook.svg" width="32" alt="">
+                                        <img src="/assets/img/facebook.svg" width="32" alt="">
                                     </div>
                                     <div class="col-12 col-md-10 text-center">
                                         Facebook
