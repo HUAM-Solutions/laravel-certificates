@@ -64,8 +64,12 @@
                                 <ul class="dropdown-menu">
                                     {{-- <li><a class="dropdown-item" href="/profile">Profile</a></li>
                                     <li><a class="dropdown-item" href="#">Another action</a></li> --}}
-                                    <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" href="/logout">Logout</a></li>
+                                    {{--<li><hr class="dropdown-divider"></li>--}}
+                                    <li>
+                                        <a class="dropdown-item" href="/logout">
+                                            <i class="fa-solid fa-right-from-bracket"></i> LogOut
+                                        </a>
+                                    </li>
                                 </ul>
                             </li> 
                         @endauth

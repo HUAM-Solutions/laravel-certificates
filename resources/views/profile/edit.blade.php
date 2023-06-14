@@ -43,7 +43,7 @@
                 <div class="row">
                   <label for="password" class="col-sm-2 col-form-label">Contraseña</label>
                   <div class="col-sm-7">
-                    <input type="password" class="form-control" name="password" placeholder="Ingrese la contraseña sólo en caso de modificarla">
+                    <input type="password" class="form-control" name="password"  placeholder="Ingrese la contraseña sólo en caso de modificarla">
                     @if ($errors->has('password'))
                       <span class="error text-danger" for="input-password">{{ $errors->first('password') }}</span>
                     @endif

@@ -42,9 +42,9 @@ class ProfileController extends Controller
         //$user=User::find($id);
         $data=$request->only('name','lastname','email');
         $password=$request->input('password');
-        if ($password) {
+        if ($password) 
             $data['password']=bcrypt($password);
-        }
+        
         $user->update($data);
         return redirect()->route('profile.index');
     }
