@@ -20,26 +20,33 @@ class ProfileController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
-    {
-        return view('cursos.show', compact('curso'));
-    }
+    // public function show(string $id)
+    // {
+    //     $user = User::finOrFail($id);
+    //     return view('profile.show', compact('user'));
+    // }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Curso $curso)
+    public function edit(User $user)
     {
-        return view('cursos.edit', compact('curso'));
+        return view('profile.edit', compact('user'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Curso $curso)
+    public function update(Request $request,User $user)
     {
-        $curso->update($request->all());
-        return redirect()->route('cursos.index');
+        //$user=User::find($id);
+        $data=$request->only('name','lastname','email');
+        $password=$request->input('password');
+        if ($password) 
+            $data['password']=bcrypt($password);
+        
+        $user->update($data);
+        return redirect()->route('profile.index');
     }
 
 }

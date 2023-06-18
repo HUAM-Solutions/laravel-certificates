@@ -25,6 +25,10 @@ Route::resource('cursos', CursoController::class);
 
 
 // Rutas solo para usuarios
-Route::get('/profile',[ProfileController::class, 'index']);
+Route::get('/profile',[ProfileController::class, 'index'])->name('profile.index');
+Route::get('/profile/{user}/edit', [ProfileController::class, 'edit'])->name('profile.edit');
+Route::put('/profile/{user}', [ProfileController::class, 'update'])->name('profile.update');
 
+
+// Route::get('/profile',[ProfileController::class, 'index']);
 

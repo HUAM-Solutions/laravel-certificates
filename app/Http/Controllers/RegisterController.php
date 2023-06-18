@@ -9,6 +9,7 @@ class RegisterController extends Controller
     public function show(){
         if (Auth::check()) {
             return redirect('/home');
+            control.log(Auth::check());
         }
         return view('auth.register');
     }

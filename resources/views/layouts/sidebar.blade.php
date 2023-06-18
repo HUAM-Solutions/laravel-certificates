@@ -49,7 +49,7 @@
                         @endif
                         <li class="nav-item py-2 py-sm-0 ">
                             <a href="/logout" class="nav-link text-white" >
-                                <i class="fa-sharp fa-regular fa-right-from-bracket"></i><span class="fs-5 ms-3 d-none d-sm-inline">LogOut</span>
+                                <i class="fa-solid fa-right-from-bracket"></i><span class="fs-5 ms-3 d-none d-sm-inline">LogOut</span>
                             </a>
                         </li>
                     </ul>
@@ -58,15 +58,25 @@
                     <button class="btn border-none dropdown-toggle text-white" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fa-solid fa-user"></i><span class="ms-2">{{auth()->user()->name ??auth()->user()->email}}</span>
                     </button>  
-                    <ul class="dropdown-menu" aria-labelledby="triggerId">
-                        <li class="dropdown-item" href=/profile">Setting</li>
-                        <li class="dropdown-item" href=/logout">LogOut</li>
+                    <ul class="navbar-nav me-5 mb-5 mb-lg-0">
+                        @auth
+                            <li class="nav-item dropdown">
+                                <ul class="dropdown-menu">
+                                    {{-- <li><a class="dropdown-item" href="/profile">Profile</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li> --}}
+                                    {{--<li><hr class="dropdown-divider"></li>--}}
+                                    <li>
+                                        <a class="dropdown-item" href="/logout">
+                                            <i class="fa-solid fa-right-from-bracket"></i> LogOut
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li> 
+                        @endauth
+                        
                     </ul>
                 </div>
             </div>
-            {{-- <div class="container">
-                @yield('content')
-            </div>  --}}
             
         </div>
     </div>

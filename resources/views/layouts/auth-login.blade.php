@@ -61,6 +61,7 @@
         width: 100%;
     }
     .bg{
+
         background-size: cover;
         background-position: center center;
         background-color: #0E2334;

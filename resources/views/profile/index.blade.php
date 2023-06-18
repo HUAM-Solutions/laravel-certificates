@@ -30,12 +30,8 @@
                                                         <td>{{auth()->user()->birthdate}}</td>
                                                         <td>{{auth()->user()->email}}</td>
                                                         <td class="td-actions">
-                                                            <button class="btn btn-info" type="button">
-                                                                {{-- <a href="#" class="nav-link text-dark" >
-                                                                    <i class="fa-sharp fa-regular fa-pen-to-square"></i>
-                                                                </a> --}}
-                                                                <i class="fa-sharp fa-regular fa-pen-to-square"></i>
-                                                            </button>
+                                                            <a href="{{ route('profile.edit', auth()->user()->id) }}" class="btn btn-warning"><i class="fa-sharp fa-regular fa-pen-to-square"></i>edit</a>
+                                                        
                                                         </td>
                                                     </tr>
                                                 
@@ -53,4 +49,6 @@
             </div>
         </div>
     </div>
+
+
 @endsection

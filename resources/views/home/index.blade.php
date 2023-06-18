@@ -3,7 +3,7 @@
 
     <h1 class="container">Home</h1>
     @auth
-        <p>Bienvenido {{auth()->user()->name ??auth()->user()->email}}, estas autenticado a la pagina</p>
+        <p>Bienvenido {{auth()->user()->name}} {{auth()->user()->lastname}}, estas autenticado a la pagina</p>
         <p>
             <a href="/logout">logout</a>
         </p>
