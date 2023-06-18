@@ -6,18 +6,18 @@
         @include('layouts.messages')
         <div class="form-floating mb-4">
             <input type="email" placeholder="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            <label for="email" class="form-label">Email address</label>
-            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            <label for="email" class="form-label">E-mail</label>
+            <div id="emailHelp" class="form-text">No compartiremos tu correo electrónico con nadie más.</div>
         </div>
         <div class="form-floating mb-4">
             <input type="password" placeholder="password" name="password" class="form-control" id="exampleInputPassword1">
-            <label for="password" class="form-label">Password</label>
+            <label for="password" class="form-label">Contraseña</label>
         </div>
         <div class="mb-4">
-            <span>Create una cuenta <a href="/register">Create account</a></span> 
+            <span>¿Aún no tienes alguna cuenta? <a href="/register" class="btn-register">Crear cuenta</a></span> 
         </div>
         <div class="d-grid">
-            <button type="submit" class="btn btn-primary">Sign in</button>
+            <button type="submit" class="btn btn-login bw-100">Ingresar</button>
         </div>
     </form>
                 

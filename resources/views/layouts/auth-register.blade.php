@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aplicacion de login</title>
+    <link rel="shortcut icon" href="assets/img/logo.png">
+    <title>Reliser Safety Training - Registro</title>
     <link rel="stylesheet" href="{{ url('assets/css/bootstrap.min.css')}}">
+    <script src="https://kit.fontawesome.com/a6a5cc7eb9.js" crossorigin="anonymous"></script>
+
 </head>
 <style>
     body {
@@ -23,11 +26,13 @@
         left: 0;
         width: 100%;
         height: 100%;
+        min-height: 100%;
     }
 
     .form-container {
         opacity: 0.9;
         width: 400px;
+        margin-top: 25%;
         position: relative;
         z-index: 1; /* Asegúrate de que el z-index sea mayor que el del fondo SVG */
     }
@@ -38,19 +43,51 @@
 		top: 0;
 		left: 0;
         width: 100%;
-        height: 100%;
+        height: 160vh; /**Falta arreglar */
 		box-sizing: border-box;
 		display: block;
 		background-color: #0e4166;
         background-image: linear-gradient(to bottom, rgba(14, 65, 102, 0.86), #0e4166);
 	}
+
+    .btn{
+        background-color: #00CCCB;
+        color: #0E2334;
+    }
+
+    .btn:hover{
+        background-color: #001E31;
+        color: #FFFFFF;
+    }
+
+    .btn-login{
+        text-decoration: none;
+        color: #0E2334;
+        font-weight: bold;
+    }
+
+    .btn-login:hover{
+        color: #00CCCB; 
+    }
+
+    .fa-solid{
+        color: #c3132e;
+    }
+
+    .header-color-auth{
+        padding-top: 2%;
+        background-color: #0E2334;
+        color: #FFFFFF;
+        border-radius: 10px;
+    }
+
 </style>
 
 <body>
 
     <div class="background-container">
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-            width="100%" height="100%" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice">
+            width="100%" height="100%" viewBox="0 0 1700 900" preserveAspectRatio="xMidYMax slice">
             <defs>
                 <linearGradient id="bg">
                     <stop offset="0%" style="stop-color:rgba(130, 158, 249, 0.06)"></stop>

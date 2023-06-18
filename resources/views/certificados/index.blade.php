@@ -3,8 +3,9 @@
 @section('content')
 <div class="container">
     <h1>Certificados</h1>
-    <a href="{{ route('certificados.create') }}" class="btn btn-primary">Crear Certificado</a>
-    <table class="table">
+    <hr/>
+    <a href="{{ route('certificados.create') }}" type="button" class="button-color my-2">Crear Certificado</a>
+    <table class="table table-info">
         <thead>
             <tr>
                 <th>ID</th>

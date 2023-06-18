@@ -8,6 +8,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CertificadoController;
 use App\Http\Controllers\CursoController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\DashboardController;
 
 // Rutas para todos
 Route::get('/register', [RegisterController::class, 'show']);
@@ -18,6 +19,7 @@ Route::get('/logout', [LogoutController::class, 'logout']);
 Route::get('/home', [HomeController::class, 'index']);
 
 // Rutas solo para administradores
+Route::get('/dashboard', [DashboardController::class, 'index']);
 Route::resource('certificados', CertificadoController::class);
 Route::resource('cursos', CursoController::class);
 
