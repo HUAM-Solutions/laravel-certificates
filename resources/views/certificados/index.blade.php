@@ -5,8 +5,8 @@
     <h1>Certificados</h1>
     <hr/>
     <a href="{{ route('certificados.create') }}" type="button" class="button-color my-2">Crear Certificado</a>
-    <table class="table table-info">
-        <thead>
+    <table class="table ">
+        <thead class="bg-table-head">
             <tr>
                 <th>ID</th>
                 <th>Nombre</th>
@@ -14,7 +14,7 @@
                 <th>Acciones</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="table-light">
         @foreach($certificados as $certificado)
             <tr>
                 <td>{{ $certificado->id }}</td>

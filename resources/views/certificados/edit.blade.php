@@ -1,28 +1,46 @@
 @extends('layouts.app-master')
-
-
 @section('content')
 <div class="container">
-    <h1>Crear Certificado</h1>
-    <form action="{{ route('certificados.store') }}" method="POST">
-        @csrf
-        <div class="form-group">
-            <label for="nombre">Nombre</label>
-            <input type="text" class="form-control" id="nombre" name="nombre" required>
-        </div>
-        <div class="form-group">
-            <label for="codigo">Código</label>
-            <input type="text" class="form-control" id="codigo" name="codigo" required>
-        </div>
-        <div class="form-group">
-            <label for="curso_id">Curso</label>
-            <select class="form-control" id="curso_id" name="curso_id">
-                @foreach($cursos as $curso)
-                    <option value="{{ $curso->id }}">{{ $curso->nombre }}</option>
-                @endforeach
-            </select>
-        </div>
-        <button type="submit" class="btn btn-primary">Guardar</button>
-    </form>
+    <h1>Certificados</h1>
+    <hr/>
+    <div class="row justify-content-center ">
+        <div class="col-md-6">
+            <form action="{{ route('certificados.store') }}" method="POST">
+            @csrf
+                <div class="card card-profile border-secondary mb-3 ">
+                <div class="card-header border-info">
+                    <h4 class="card-title">Editar Certificado</h4>
+                </div> 
+                <div class="card-body border-info">
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group mb-3">
+                                <label for="nombre">Nombre</label>
+                                <input type="text" class="form-control" id="nombre" name="nombre"  required>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="codigo">Código</label>
+                                <input type="text" class="form-control" id="codigo" name="codigo" required>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="curso_id">Curso</label>
+                                <select class="form-control" id="curso_id" name="curso_id">
+                                    @foreach($cursos as $curso)
+                                        <option value="{{ $curso->id }}">{{ $curso->nombre }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-success">Guardar cambios</button>                
+                </div>
+                </div>  
+            </form>
+        </div> 
+    </div>
 </div>
 @endsection
+
+

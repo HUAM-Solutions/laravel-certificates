@@ -50,14 +50,10 @@
                             </a>
                           
                         </li>
-                       
                         <li class="nav-item py-2 py-sm-0 ">
-                            <a href="#" data-bs-toggle="modal" data-bs-target="#ModalProfile"  class="nav-link text-white" >
-                                <i class=" fa-solid fa-user"></i><span class="fs-5 ms-3 d-none d-sm-inline ">Perfil</span>
-                                   
+                            <a href="/profile" class="nav-link text-white" >
+                                <i class="fa-solid fa-user"></i><span class="fs-5 ms-3 d-none d-sm-inline">Profile</span>
                             </a>
-                         
-                            @include('profile.modal.index')
                         </li>      
                         @if(auth()->user() && auth()->user()->role === 'admin')
                         <li class="nav-item py-2 py-sm-0 ">

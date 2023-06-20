@@ -30,7 +30,7 @@
             </div>
             <div class="mb-3">
                     <label for="email" class="col-sm-2 col-form-label">Correo</label>
-                    <div class="col-sm-7">
+                    <div class="col-sm-10">
                     <input type="email" class="form-control" name="email" value="{{auth()->user()->email }}">
                     @if ($errors->has('email'))
                         <span class="error text-danger" for="input-email">{{ $errors->first('email') }}</span>
@@ -39,7 +39,7 @@
             </div>
             <div class="mb-3">
                     <label for="password" class="col-sm-2 col-form-label">Contraseña</label>
-                    <div class="col-sm-7">
+                    <div class="col-sm-10">
                     <input type="password" class="form-control" name="password"  placeholder="Ingrese la contraseña sólo en caso de modificarla">
                     @if ($errors->has('password'))
                         <span class="error text-danger" for="input-password">{{ $errors->first('password') }}</span>
@@ -83,7 +83,7 @@
               </div> --}}
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-info " data-bs-toggle="modal" data-bs-target="#ModalProfile"  data-bs-dismiss="modal">Ver tu perfil</button>
+        <button type="button" class="btn btn-secondary"  data-bs-dismiss="modal">Cerrar</button>
         <button class="btn btn-success"   type="submit"  >Actualizar</button>
       </div>
       <form>
