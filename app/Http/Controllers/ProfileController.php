@@ -15,7 +15,7 @@ class ProfileController extends Controller
     public function index()
     {
         $profiles = User::all();
-        return view('home.index', compact('profiles'));
+        return view('profile.index', compact('profiles'));
     }
     /**
      * Display the specified resource.

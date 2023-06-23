@@ -5,8 +5,8 @@
     <h1>Cursos</h1>
     <hr/>
     <a href="{{ route('cursos.create') }}" type="button" class="button-color my-2">Crear Curso</a>
-    <table class="table table-info ">
-        <thead>
+    <table class="table">
+        <thead class="bg-table-head">
             <tr>
                 <th>ID</th>
                 <th>Nombre</th>
@@ -14,7 +14,7 @@
                 <th>Acciones</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="table-light">
         @foreach($cursos as $curso)
             <tr>
                 <td>{{ $curso->id }}</td>
