@@ -1,12 +1,8 @@
 @extends('layouts.auth-register')
 @section('content')
-    <div class="container bg-white  my-2 py-3 rounded">
+    <div class="">
         <form action="/register" method="POST">
             @csrf
-            <div class="header-color-auth">
-                <h1 class="text-center">Nueva cuenta</h1>
-                <hr/>
-            </div>
 
             @include('layouts.messages')
             <div class="form-floating mb-3">
@@ -37,12 +33,13 @@
                 <input type="password" placeholder="confirm_password" name="password_confirmation" class="form-control">
                 <label class="form-label">Confirmar contraseña <i class="fa-solid fa-asterisk fa-xs"></i></label>
             </div>
-            <div class="mb-4 ">
+            <div class="mb-3 ">
                 <span >¿Ya tienes una cuenta? <a href="/login" class="btn-login">Iniciar sesión</a></span>
             </div>
-            <button type="submit" class="btn w-100 ">Crear cuenta</button>
-            
-        
+            <div class="d-grid">
+            <button type="submit" class="btn btn-register ">Crear cuenta</button>
+            </div>
+
         </form>
     </div>
      

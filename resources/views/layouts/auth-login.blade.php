@@ -10,7 +10,7 @@
 </head>
 <style>
 
-    body, html{
+    body{
     width: 100%;
     height: 100%;
     padding: 0;
@@ -48,59 +48,37 @@
         100%{background-position:5% 0%}
     }
 
-
-    /* body{
-        background-color: #00CCCB;
-        background: linear-gradient(to right,#32aada,#3ff5fc)
-        width:100%;
-        display:flex;
-        align-items: center;
-        justify-content: center;
-        padding-top:0px;
-     } */
-    .form-container{
-        width: 100%;
-    }
-    /*
-    .bg{
-
-        background-size: cover;
-        background-position: center center;
-        background-color: #0E2334;
-        background-image: url({{ asset('assets/img/curso.jpg') }});
-    }*/
     .bg{
         background-color: #0E2334;
         height: 80vh;
     }
-
-
     .btn-login{
         background-color: #00CCCB;
         color: #0E2334;
         
     }
-
     .btn-login:hover{
         background-color: #001E31;
         color: #FFFFFF;
     }
-
     .btn-register{
         text-decoration: none;
         color: #0E2334;
         font-weight: bold;
     }
-
     .btn-register:hover{
         color: #00CCCB; 
     }
+
     .carousel-control-slide{
         margin-top: 10%;
         
     }
     .carousel-control-slide img{
         border-radius: 15px;
+    }
+    .container{
+        background-color: #0E2334;
     }
 
     .logo{
@@ -112,36 +90,33 @@
 
 </style>
 <body>
-    <div class="container w-75  mt-5 rounded shadow">
+    <div class="container w-75 mt-5 mb-5 rounded shadow">
         <div class="row align-items-stretch">
             <div class="col bg d-none d-lg-block col-md-5 col-lg-5 col-xl-6 rounded">
                 <img class="logo" src="assets/img/logo_web_verde.png">
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active carousel-control-slide">
-                    <img src="assets/img/brigadas.png" class="d-block w-100" alt="...">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active carousel-control-slide">
+                        <img src="assets/img/brigadas.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item carousel-control-slide">
+                        <img src="assets/img/brigadas-1.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item carousel-control-slide">
+                        <img src="assets/img/post.png" class="d-block w-100" alt="...">
+                        </div>
                     </div>
-                    <div class="carousel-item carousel-control-slide">
-                    <img src="assets/img/brigadas-1.png" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item carousel-control-slide">
-                    <img src="assets/img/post.png" class="d-block w-100" alt="...">
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
             </div>
             <div class="col bg-white py-5 rounded-end">
-                <div class="tex-end">
-                  
-                </div>
                 <div >
                     <h2 class="fw-bold text-center ">Iniciar sesión</h2>
                     <hr/>
