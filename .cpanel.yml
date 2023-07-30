@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/cptrstraining/public_html/
-    - /bin/cp -av --exclude 'index.php' public/ $DEPLOYPATH
+    - export DEPLOYPATH=/home/crstraining/public_html/
+    - /bin/rsync -av public/ $DEPLOYPATH
