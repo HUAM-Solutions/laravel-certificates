@@ -1,1 +1,20 @@
-
+on: 
+  push:
+    branches: 
+      
+main
+name: Publish certificados to Cpanel
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+    
+name: 🚚 Get latest code
+    uses: actions/checkout@v3
+name: 📂 Sync files
+uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+with:
+  server: certifcados.rstraining.org.pe
+  username: certificados_rstraining@certifcados.rstraining.org.pe
+  password: certificadosDeploy2023*
