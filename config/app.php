@@ -18,6 +18,19 @@ return [
 
     'name' => env('APP_NAME', 'Laravel'),
 
+     /*
+    |--------------------------------------------------------------------------
+    | Application Log Configuration
+    |--------------------------------------------------------------------------
+    |
+    | This determines how errors and other log messages are handled by your
+    | application. By default, Laravel will use the 'single' log channel
+    | to write log entries to the 'storage/logs/laravel.log' file.
+    |
+    */
+
+    'log' => env('APP_LOG', 'single'),
+
     /*
     |--------------------------------------------------------------------------
     | Application Environment
