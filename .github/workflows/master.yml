@@ -2,7 +2,7 @@ on:
   push:
     branches: 
       
-main
+master
 name: Publish certificados to Cpanel
 jobs:
   web-deploy:
