@@ -14,6 +14,6 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
-        server: certifcados.rstraining.org.pe
-        username: certificados_rstraining@certifcados.rstraining.org.pe
-        password: certificadosDeploy2023*
+        ftp-server: ${{ secrets.FTP_SERVER_CERTIFICATE }}
+        ftp-username: ${{ secrets.FTP_USERNAME_CERTIFICATE }}
+        ftp-password: ${{ secrets.FTP_PASSWORD_CERTIFICATE }}
